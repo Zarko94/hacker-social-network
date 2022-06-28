@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Hexa</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="inner-container left-side">
+            <img src="img/profile.jpg" alt="profile" class="profile" />
+            <p><b id="username"></b></p>
+            <p><b id="email"></b></p>
+            <button class="editAccount">Izmjeni nalog</button>
+            <button class="logout">Odjavi se</button>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="inner-container right-side">
+            <form id="postForm">
+              <textarea
+                id="postContent"
+                placeholder="Napisi nesto i objavi..."
+              ></textarea>
+              <button type="submit">Objavi</button>
+            </form>
+            <div id="allPostsWrapper"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="custom-modal">
+      <button id="closeModal">X</button>
+      <form id="editForm">
+        <h2>Izmjeni svoj profil</h2>
+        <div>
+          <label for="korisnicko_ime">Korisnicko ime:</label>
+          <input id="korisnicko_ime" type="text" name="korisnicko_ime" />
+        </div>
+        <div>
+          <label for="edit_email">Email adresa: *</label>
+          <input type="text" name="email" id="edit_email" />
+        </div>
+        <div>
+          <button>Izmjeni</button>
+        </div>
+      </form>
+      <hr />
+      <button id="deleteProfile">OBRISI PROFIL</button>
+    </div>
+
+    <script src="js/Session.js"></script>
+    <script src="js/User.js"></script>
+    <script src="js/Post.js"></script>
+    <script src="js/hexa.js"></script>
+  </body>
+</html>
